@@ -1,7 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
     background-color: #f0f8ff;
     color: #222;
     font-family: Arial, sans-serif;
+}
+
+/* Sticky header */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 10;
+}
+
+/* Absolutely position the “Back to Top” link */
+footer nav {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
 }
 
 /* CSS Variables + Fallback */
@@ -67,6 +84,12 @@ h1.title,
     text-transform: uppercase;
 }
 
+button {
+    min-width: 100px;
+    width: 3cm;
+    height: 10mm;
+}
+
 /* Pseudo-class Selector */
 a:hover {
     color: #ff5733;
@@ -75,12 +98,27 @@ a:hover {
 /* Unit Usage */
 nav {
     padding: 1rem;
-    /* relative */
     margin-top: 2em;
-    /* relative */
     border-radius: 10px;
-    /* absolute */
+
+    ul {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+
+        li {
+            a {
+                text-decoration: none;
+                color: #333;
+
+                &:hover {
+                    color: #d63384;
+                }
+            }
+        }
+    }
 }
+
 
 /* Box Model (Long and Short) */
 section {
@@ -94,9 +132,6 @@ section {
 nav ul {
     display: inline-block;
 }
-
-/* Fonts (Google Fonts) */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -123,7 +158,6 @@ section {
 /* Shorthand version */
 footer {
     margin: 1rem auto;
-    /* auto margin for horizontal centering */
     padding: 1rem 2rem;
     border: 1px dashed #666;
     border-radius: 5px;
@@ -137,4 +171,90 @@ fieldset {
     padding: 0.5rem;
     margin-top: 1rem;
     border-radius: 6px;
+}
+
+/* Example Grid Container */
+.media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-items: center;
+}
+
+/* Highlight any <fieldset> that contains a <select> dropdown */
+fieldset:has(select) {
+    background-color: #f0f8ff;
+    border: 2px solid #00bfff;
+}
+
+/* Media Query for Desktop approach */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    padding: 2rem;
+}
+
+/* Media Query for Tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    main {
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1,
+    h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    img,
+    video {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
