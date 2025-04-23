@@ -1,0 +1,99 @@
+body {
+    background-color: #f0f8ff;
+    color: #222;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* CSS Variables + Fallback */
+  :root {
+    --main-color: #d63384;
+  }
+  
+  b.specs {
+    color: var(--main-color, #ff69b4); /* fallback to pink */
+  }
+  
+  /*   Element Selector  */
+  h2 {
+    color: rgb(34, 90, 150);
+  }
+  
+  /*  ID Selector  */
+  #top {
+    background-color: color-mix(in srgb, blue 70%, white);
+    color: white;
+    padding: 1rem;
+  }
+  
+  /*  Class Selector  */
+  .specs {
+    font-weight: bold;
+  }
+  
+  /*  Attribute Selector  */
+  input[placeholder] {
+    background-color: #fff3cd;
+  }
+  
+  /*  Universal Selector  */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /*  Descendant Combinator  */
+  main section {
+    margin-bottom: 2rem;
+  }
+  
+  /*  Child Combinator  */
+  ul > li {
+    margin-left: 1rem;
+  }
+  
+  /*  General Sibling Combinator  */
+  h2 ~ p {
+    font-style: italic;
+  }
+  
+  /*  Adjacent Sibling Combinator  */
+  h3 + section {
+    border-top: 2px solid #ccc;
+  }
+  
+  /*  Combining Selectors  */
+  h1.title, #top {
+    text-transform: uppercase;
+  }
+  
+  /*  Pseudo-class Selector  */
+  a:hover {
+    color: #ff5733;
+  }
+  
+  /*  Unit Usage  */
+  nav {
+    padding: 1rem;         /* relative */
+    margin-top: 2em;       /* relative */
+    border-radius: 10px;   /* absolute */
+  }
+  
+  /*  Box Model (Long and Short)  */
+  section {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    border: 2px solid #999;
+  }
+  
+  /*  Display property  */
+  nav ul {
+    display: inline-block;
+  }
+  
+  /*  Fonts (Google Fonts)  */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+    
