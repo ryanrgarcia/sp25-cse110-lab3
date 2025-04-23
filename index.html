@@ -108,7 +108,7 @@
         Will we be offering automatic and manual options or strictly manual? How will this affect our target audience?
       </details>
     </section>
-    <section>
+    <section id="media" class="media-grid">
       <h2 id="media">Media</h2>
       <img src="https://img.freepik.com/premium-vector/drawing-racing-car-with-wheels-icon-it_735377-489.jpg"
         alt="rough sketches of possible designs" width="250">
@@ -127,7 +127,7 @@
   <footer>
     <h6 id="bottom">Meeting End</h6>
     <form>
-      <input type="text" placeholder="Enter favorite car" />
+      <input type="text" name="favorite-car" placeholder="Enter favorite car" />
       <button>Submit</button>
       <br>
       <textarea id="story" name="story" rows="1" cols="30">My favorite car is a BMW E46 M3</textarea>
@@ -144,13 +144,13 @@
           <option value="Green"></option>
         </datalist>
         <br>
+        <label for="transmission-preference">Manual or Automatic?</label>
+        <select name="gearbox" id="transmission-preference">
+          <option value="">--Please choose an option--</option>
+          <option value="manual">Manual</option>
+          <option value="automatic">Automatic</option>
+        </select>
       </fieldset>
-      <label for="transmission-preference">Manual or Automatic?</label>
-      <select name="gearbox" id="transmission-preference">
-        <option value="">--Please choose an option--</option>
-        <option value="manual">Manual</option>
-        <option value="automatic">Automatic</option>
-      </select>
     </form>
     <nav>
       <ul>
